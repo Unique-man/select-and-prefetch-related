@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        {% for DEO in QLDEO %}
+            <h1>{{DEO.DNAME}}</h1>
+            <table border="3">
+                <tr>
+                    <th>EMPNO</th>
+                    <th>ENAME</th>
+                    <th>JOB</th>
+                    <th>MGR</th>
+                    <th>SAL</th>
+                    <th>COMM</th>
+                </tr>
+                {% for EO in DEO.emp_set.all %}
+                    <tr>
+                        <td>{{EO.EMPNO}}</td>
+                        <td>{{EO.ENAME}}</td>
+                        <td>{{EO.JOB}}</td>
+                        <td>{{EO.MGR}}</td>
+                        <td>{{EO.SAL}}</td>
+                        <td>{{EO.COMM}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    </center>
+</body>
+</html>

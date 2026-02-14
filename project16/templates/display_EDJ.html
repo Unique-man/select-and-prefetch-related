@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DEPT-EMP JOIN</h1>
+        <table border="2px">
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <th>MGR</th>
+                <th>HIREDATE</th>
+                <th>SAL</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>LOC</th>
+            </tr>
+              {% for i in QLEDO %}
+            <tr>
+                <td>{{i.EMPNO}}</td>
+                <td>{{i.ENAME}}</td>
+                <td>{{i.JOB}}</td>
+                <td>{{i.MGR}}</td>
+                <td>{{i.HIREDATE}}</td>
+                <td>{{i.SAL}}</td>
+                <td>{{i.COMM}}</td>
+                <td>{{i.DEPTNO}}</td>
+                <td>{{i.DEPTNO.DNAME}}</td>
+                <td>{{i.DEPTNO.LOC}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
